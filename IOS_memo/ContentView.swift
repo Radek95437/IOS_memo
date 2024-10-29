@@ -47,6 +47,45 @@ struct ContentView: View {
     let cols = [
         GridItem(.adaptive(minimum: 90))
     ]
+    var menu: some View{
+        HStack {
+            Button(action: {
+                selectedTheme = "Happy"
+            }) {
+                VStack {
+                    Text("😀")
+                        .font(.title)
+                    Text("Happy")
+                        .font(.caption)
+                }
+            }
+            .padding()
+            
+            Button(action: {
+                selectedTheme = "Animals"
+            }) {
+                VStack {
+                    Text("🐶")
+                        .font(.title)
+                    Text("Animals")
+                        .font(.caption)
+                }
+            }
+            .padding()
+            
+            Button(action: {
+                selectedTheme = "Food"
+            }) {
+                VStack {
+                    Text("🍎")
+                        .font(.title)
+                    Text("Food")
+                        .font(.caption)
+                }
+            }
+            .padding()
+        }
+    }
     
     var body: some View {
         VStack {
@@ -66,7 +105,6 @@ struct ContentView: View {
             //                .disabled(displayedCards.count < 2)
             //            }
             //            .padding()
-            Text("Memo").font(.largeTitle)
             //            ScrollView{
             //                        LazyVGrid(columns: cols, spacing: 20){
             //                            ForEach(displayedCards, id: \.self) { content in
@@ -82,44 +120,8 @@ struct ContentView: View {
             //            //displayedCards = Array(allCardContents.prefix(2))
             //            displayedCards = Array(allCardContents)
             //        }
-            HStack {
-                Button(action: {
-                    selectedTheme = "Happy"
-                }) {
-                    VStack {
-                        Text("😀")
-                            .font(.title)
-                        Text("Happy")
-                            .font(.caption)
-                    }
-                }
-                .padding()
-                
-                Button(action: {
-                    selectedTheme = "Animals"
-                }) {
-                    VStack {
-                        Text("🐶")
-                            .font(.title)
-                        Text("Animals")
-                            .font(.caption)
-                    }
-                }
-                .padding()
-                
-                Button(action: {
-                    selectedTheme = "Food"
-                }) {
-                    VStack {
-                        Text("🍎")
-                            .font(.title)
-                        Text("Food")
-                            .font(.caption)
-                    }
-                }
-                .padding()
-            }
             
+            Text("Memo").font(.largeTitle)
             
             if selectedTheme == "Happy" {
                 HappyThemeView()
@@ -131,6 +133,8 @@ struct ContentView: View {
                 Text("Select a theme")
                     .font(.headline)
             }
+            
+            menu
         }
         //.padding()
     }
