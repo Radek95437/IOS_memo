@@ -5,85 +5,137 @@
 //  Created by student on 22.10.2024.
 //
 
-import SwiftUI
-
-struct ContentView: View {
-    let cardContents: [String] = ["😀", "🎉", "😎", "🥳", "🧩", "🐸"]
-    
-    let cols = [
-        //GridItem(.adaptive(minimum: 60))
-        GridItem(.fixed(120)),
-        GridItem(.fixed(120))
-    ]
-
-    var body: some View {
-//        VStack {
-//            ForEach(cardContents, id: \.self) { content in
-//                CardView(content: content)
-//                    .padding()
-//            }
-//        }
-        
-        ScrollView{
-            LazyVGrid(columns: cols, spacing: 20){
-                ForEach(cardContents, id: \.self) { content in
-                    CardView(content: content)
-                        .padding()
-                }.padding()
-            }.padding()
-        }
-        
-    }
-}
-
-
-
 //import SwiftUI
 //
 //struct ContentView: View {
-//    let allCardContents: [String] = ["😀", "🎉", "😎", "🥳", "🧩", "🐸"]
-//    @State private var displayedCards: [String] = []
+//    let cardContents: [String] = ["😀", "🎉", "😎", "🥳", "🧩", "🐸"]
+//    
 //    let cols = [
-//            //GridItem(.adaptive(minimum: 60))
-//            GridItem(.fixed(120)),
-//            GridItem(.fixed(120))
-//        ]
+//        //GridItem(.adaptive(minimum: 60))
+//        GridItem(.fixed(120)),
+//        GridItem(.fixed(120))
+//    ]
 //
 //    var body: some View {
-//        VStack {
-//            HStack {
-//                Button(action: { adjustCardNumber(by: 2, symbol: "add") }) {
-//                    Image(systemName: "plus.circle.fill")
-//                        .resizable()
-//                        .frame(width: 50, height: 50)
-//                }
-//                .disabled(displayedCards.count >= allCardContents.count)
-//
-//                Button(action: { adjustCardNumber(by: -2, symbol: "remove") }) {
-//                    Image(systemName: "minus.circle.fill")
-//                        .resizable()
-//                        .frame(width: 50, height: 50)
-//                }
-//                .disabled(displayedCards.count < 2)
-//            }
-//            .padding()
-//
-//            ScrollView{
-//                        LazyVGrid(columns: cols, spacing: 20){
-//                            ForEach(displayedCards, id: \.self) { content in
-//                                CardView(content: content)
-//                                    .padding()
-//                            }.padding()
-//                        }.padding()
-//                    }
-//            .padding()
+////        VStack {
+////            ForEach(cardContents, id: \.self) { content in
+////                CardView(content: content)
+////                    .padding()
+////            }
+////        }
+//        
+//        ScrollView{
+//            LazyVGrid(columns: cols, spacing: 20){
+//                ForEach(cardContents, id: \.self) { content in
+//                    CardView(content: content)
+//                        .padding()
+//                }.padding()
+//            }.padding()
 //        }
-//        .onAppear {
-//            
-//            displayedCards = Array(allCardContents.prefix(2))
-//        }
+//        
 //    }
-//
+//}
+
+
+
+import SwiftUI
+
+struct ContentView: View {
+    let allCardContents: [String] = ["😀", "🎉", "😎", "🥳", "🧩", "🐸"]
+    @State private var selectedTheme: String?
+    @State private var displayedCards: [String] = []
+    let cols = [
+        GridItem(.adaptive(minimum: 90))
+    ]
+    
+    var body: some View {
+        VStack {
+            //            HStack {
+            //                Button(action: { adjustCardNumber(by: 2, symbol: "add") }) {
+            //                    Image(systemName: "plus.circle.fill")
+            //                        .resizable()
+            //                        .frame(width: 50, height: 50)
+            //                }
+            //                .disabled(displayedCards.count >= allCardContents.count)
+            //
+            //                Button(action: { adjustCardNumber(by: -2, symbol: "remove") }) {
+            //                    Image(systemName: "minus.circle.fill")
+            //                        .resizable()
+            //                        .frame(width: 50, height: 50)
+            //                }
+            //                .disabled(displayedCards.count < 2)
+            //            }
+            //            .padding()
+            Text("Memo").font(.largeTitle)
+            //            ScrollView{
+            //                        LazyVGrid(columns: cols, spacing: 20){
+            //                            ForEach(displayedCards, id: \.self) { content in
+            //                                CardView(content: content, cardColor: Color.red)
+            //                                    .padding()
+            //                            }.padding()
+            //                        }.padding()
+            //                    }
+            //            .padding()
+            //        }
+            //        .onAppear {
+            //            
+            //            //displayedCards = Array(allCardContents.prefix(2))
+            //            displayedCards = Array(allCardContents)
+            //        }
+            HStack {
+                Button(action: {
+                    selectedTheme = "Happy"
+                }) {
+                    VStack {
+                        Text("😀")
+                            .font(.title)
+                        Text("Happy")
+                            .font(.caption)
+                    }
+                }
+                .padding()
+                
+                Button(action: {
+                    selectedTheme = "Animals"
+                }) {
+                    VStack {
+                        Text("🐶")
+                            .font(.title)
+                        Text("Animals")
+                            .font(.caption)
+                    }
+                }
+                .padding()
+                
+                Button(action: {
+                    selectedTheme = "Food"
+                }) {
+                    VStack {
+                        Text("🍎")
+                            .font(.title)
+                        Text("Food")
+                            .font(.caption)
+                    }
+                }
+                .padding()
+            }
+            
+            
+            if selectedTheme == "Happy" {
+                HappyThemeView()
+            } else if selectedTheme == "Animals" {
+                AnimalThemeView()
+            } else if selectedTheme == "Food" {
+                FoodThemeView()
+            } else {
+                Text("Select a theme")
+                    .font(.headline)
+            }
+        }
+        //.padding()
+    }
+}
+
 //    func adjustCardNumber(by offset: Int, symbol: String) {
 //        let currentCount = displayedCards.count
 //

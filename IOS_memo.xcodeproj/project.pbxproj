@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */; };
+		3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */; };
+		3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */; };
 		3F84CF822CC7ADAF008EF1F8 /* IOS_memoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F84CF812CC7ADAF008EF1F8 /* IOS_memoApp.swift */; };
 		3F84CF842CC7ADAF008EF1F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F84CF832CC7ADAF008EF1F8 /* ContentView.swift */; };
 		3F84CF862CC7ADB0008EF1F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F84CF852CC7ADB0008EF1F8 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyThemeView.swift; sourceTree = "<group>"; };
+		3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalThemeView.swift; sourceTree = "<group>"; };
+		3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodThemeView.swift; sourceTree = "<group>"; };
 		3F84CF7E2CC7ADAF008EF1F8 /* IOS_memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F84CF812CC7ADAF008EF1F8 /* IOS_memoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_memoApp.swift; sourceTree = "<group>"; };
 		3F84CF832CC7ADAF008EF1F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +67,9 @@
 				3F84CF872CC7ADB0008EF1F8 /* Preview Content */,
 				3F84CF8F2CC7ADD2008EF1F8 /* GridView.swift */,
 				3F84CF912CC7B12E008EF1F8 /* CardView.swift */,
+				3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */,
+				3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */,
+				3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */,
 			);
 			path = IOS_memo;
 			sourceTree = "<group>";
@@ -147,6 +156,9 @@
 				3F84CF902CC7ADD2008EF1F8 /* GridView.swift in Sources */,
 				3F84CF922CC7B12E008EF1F8 /* CardView.swift in Sources */,
 				3F84CF822CC7ADAF008EF1F8 /* IOS_memoApp.swift in Sources */,
+				3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */,
+				3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */,
+				3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
