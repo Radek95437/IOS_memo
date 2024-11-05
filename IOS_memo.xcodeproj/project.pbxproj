@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3AFAEB2CDA332C00400089 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */; };
+		3F3AFAED2CDA3C3700400089 /* MemoGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */; };
 		3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */; };
 		3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */; };
 		3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
+		3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameViewModel.swift; sourceTree = "<group>"; };
 		3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyThemeView.swift; sourceTree = "<group>"; };
 		3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalThemeView.swift; sourceTree = "<group>"; };
 		3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodThemeView.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */,
 				3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */,
 				3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */,
+				3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */,
+				3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */,
 			);
 			path = IOS_memo;
 			sourceTree = "<group>";
@@ -159,6 +165,8 @@
 				3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */,
 				3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */,
 				3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */,
+				3F3AFAEB2CDA332C00400089 /* MemoGameModel.swift in Sources */,
+				3F3AFAED2CDA3C3700400089 /* MemoGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
