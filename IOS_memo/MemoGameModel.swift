@@ -8,8 +8,8 @@
 import Foundation
 
 struct MemoGameModel<CardContent: Equatable> {
-    private var mainCard: Card? = nil
-    private var cards: Array<Card>
+    private(set) var mainCard: Card? = nil
+    private(set) var cards: Array<Card>
     
     init(numberOfCards: Int, cardContentFactory: (Int)-> CardContent)
     {
@@ -26,11 +26,12 @@ struct MemoGameModel<CardContent: Equatable> {
     }
     
     func selectCard(card: Card){
-        
+        cards.randomElement()
     }
     
+    
     mutating func shuffleCard() {
-        cards.shuffled()
+        self.cards = cards.shuffled()
     }
     
     struct Card: Equatable, Identifiable {

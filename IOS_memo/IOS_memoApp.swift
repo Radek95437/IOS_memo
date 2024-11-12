@@ -11,6 +11,7 @@ import SwiftUI
 struct IOS_memoApp: App {
     var body: some Scene {
         WindowGroup {
+            @StateObject var viewModel = MemoGameViewModel()
             ContentView()
         }
     }

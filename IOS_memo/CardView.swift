@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CardView: View {
     @State private var isFaceUp: Bool = false
-    var content: String
+    var card: MemoGameModel<String>.Card
     var cardColor: Color
 
     var body: some View {
@@ -23,8 +23,10 @@ struct CardView: View {
                 }
 
             if isFaceUp {
-                Text(content)
-                    .font(.largeTitle)
+                Text(card.content)
+                    .font(.system(size: 200))
+                    .minimumScaleFactor(0.01)
+                    .aspectRatio(contentMode: .fit)
             }
         }
         .frame(width: 100, height: 150)
@@ -33,6 +35,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(content: "😀", cardColor: Color.red)
+        CardView(card: MemoGameModel<String>.Card(id: "1", content: "😀"), cardColor: Color.red)
     }
 }
