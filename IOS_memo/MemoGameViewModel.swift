@@ -59,4 +59,8 @@ class MemoGameViewModel: ObservableObject {
     func getMainCard()-> MemoGameModel<String>.Card?{
         return model.mainCard
     }
+    
+    func chooseCard(card: MemoGameModel<String>.Card) {
+            model.choose(card: card)
+        }
 }

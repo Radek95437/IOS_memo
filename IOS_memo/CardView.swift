@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct CardView: View {
-    @State private var isFaceUp: Bool = false
     var card: MemoGameModel<String>.Card
     var cardColor: Color
-
+    @State var isFaceUp: Bool = false
+    @ObservedObject var viewModel: MemoGameViewModel
+    
     var body: some View {
         let backgroundColor = isFaceUp ? Color.white : cardColor
-
+        
         ZStack {
             RoundedRectangle(cornerRadius: 12)
                 .stroke(lineWidth: 2)
@@ -19,6 +20,8 @@ struct CardView: View {
                 .onTapGesture {
                     withAnimation {
                         isFaceUp.toggle()
+                        
+                        viewModel.chooseCard(card: card)
                     }
                 }
 
@@ -33,8 +36,9 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(card: MemoGameModel<String>.Card(id: "1", content: "😀"), cardColor: Color.red)
-    }
-}
+
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView(card: MemoGameModel<String>.Card(id: "1", content: "😀"), cardColor: Color.red, isFaceUp: true)
+//    }
+//}

@@ -29,6 +29,41 @@ struct MemoGameModel<CardContent: Equatable> {
         cards.randomElement()
     }
     
+    func index (card: Card) -> Int?{
+        return cards.firstIndex(where: { $0.id == card.id })
+    }
+    
+    func indexOfFacedUpCard(excluding card: Card) -> [Int] {
+        return cards.enumerated().compactMap { (index, currentCard) in
+            (currentCard.isVisible && !currentCard.foundMatch && currentCard.id != card.id) ? index : nil
+        }
+    }
+    
+    mutating func changeVisible() {
+        for index in 0..<cards.count {
+            if !cards[index].foundMatch {
+                cards[index].isVisible = false
+            }
+        }
+    }
+    
+    func getNumberCard(from card: Card) -> String {
+        return String(card.id.dropLast())
+    }
+    
+    mutating func choose(card: Card) {
+            if let mainCard = mainCard {
+                let currentCardNumber = getNumberCard(from: card)
+                let mainCardNumber = getNumberCard(from: mainCard)
+                
+                if currentCardNumber == mainCardNumber {
+                    if let cardIndex = index(card: card) {
+                        cards[cardIndex].foundMatch = true
+                    }
+                    changeVisible()
+                }
+            }
+        }
     
     mutating func shuffleCard() {
         self.cards = cards.shuffled()

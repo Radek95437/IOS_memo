@@ -9,7 +9,7 @@ struct ContentView: View {
     func mainCardView() -> some View {
         if let mainCard = viewModel.getMainCard() {
             return AnyView(
-                CardView(card: mainCard, cardColor: viewModel.themeColor)
+                CardView(card: mainCard, cardColor: viewModel.themeColor, isFaceUp: true, viewModel: viewModel)
             )
         } else {
             return AnyView(Text("No main card"))
@@ -67,9 +67,12 @@ struct ContentView: View {
 
             LazyVGrid(columns: cols, spacing: 0) {
                 ForEach(viewModel.cards) { card in
-                    CardView(card: card, cardColor: viewModel.themeColor)
+                    CardView(card: card, cardColor: viewModel.themeColor, viewModel: viewModel)
                         .padding(5)
+                        .opacity(card.isVisible ? 1 : 0)
                 }
+                
+                
             }
 
             Button(action: {
@@ -88,6 +91,7 @@ struct ContentView: View {
         .background(viewModel.themeColor.opacity(0.2))
     }
 }
+
 
 #Preview {
     ContentView()
