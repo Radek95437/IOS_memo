@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F3AFAEB2CDA332C00400089 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */; };
 		3F3AFAED2CDA3C3700400089 /* MemoGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */; };
+		3F3EBB532CFF1EEB003B284F /* CirclePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EBB522CFF1EEB003B284F /* CirclePart.swift */; };
+		3F3EBB592CFF216C003B284F /* TransformIntoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3EBB582CFF216C003B284F /* TransformIntoCard.swift */; };
 		3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */; };
 		3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */; };
 		3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
 		3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameViewModel.swift; sourceTree = "<group>"; };
+		3F3EBB522CFF1EEB003B284F /* CirclePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePart.swift; sourceTree = "<group>"; };
+		3F3EBB582CFF216C003B284F /* TransformIntoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformIntoCard.swift; sourceTree = "<group>"; };
 		3F4414AA2CD0FA8A002C0900 /* HappyThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyThemeView.swift; sourceTree = "<group>"; };
 		3F4414AC2CD0FACD002C0900 /* AnimalThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalThemeView.swift; sourceTree = "<group>"; };
 		3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodThemeView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				3F4414AE2CD0FB08002C0900 /* FoodThemeView.swift */,
 				3F3AFAEA2CDA332B00400089 /* MemoGameModel.swift */,
 				3F3AFAEC2CDA3C3700400089 /* MemoGameViewModel.swift */,
+				3F3EBB522CFF1EEB003B284F /* CirclePart.swift */,
+				3F3EBB582CFF216C003B284F /* TransformIntoCard.swift */,
 			);
 			path = IOS_memo;
 			sourceTree = "<group>";
@@ -160,10 +166,12 @@
 			files = (
 				3F84CF842CC7ADAF008EF1F8 /* ContentView.swift in Sources */,
 				3F84CF902CC7ADD2008EF1F8 /* GridView.swift in Sources */,
+				3F3EBB592CFF216C003B284F /* TransformIntoCard.swift in Sources */,
 				3F84CF922CC7B12E008EF1F8 /* CardView.swift in Sources */,
 				3F84CF822CC7ADAF008EF1F8 /* IOS_memoApp.swift in Sources */,
 				3F4414AF2CD0FB08002C0900 /* FoodThemeView.swift in Sources */,
 				3F4414AD2CD0FACD002C0900 /* AnimalThemeView.swift in Sources */,
+				3F3EBB532CFF1EEB003B284F /* CirclePart.swift in Sources */,
 				3F4414AB2CD0FA8A002C0900 /* HappyThemeView.swift in Sources */,
 				3F3AFAEB2CDA332C00400089 /* MemoGameModel.swift in Sources */,
 				3F3AFAED2CDA3C3700400089 /* MemoGameViewModel.swift in Sources */,

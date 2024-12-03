@@ -10,6 +10,7 @@ import Foundation
 struct MemoGameModel<CardContent: Equatable> {
     private(set) var mainCard: Card? = nil
     private(set) var cards: Array<Card>
+    private(set) var score: Int = 0
     
     init(numberOfCards: Int, cardContentFactory: (Int)-> CardContent)
     {
@@ -59,8 +60,13 @@ struct MemoGameModel<CardContent: Equatable> {
                 if currentCardNumber == mainCardNumber {
                     if let cardIndex = index(card: card) {
                         cards[cardIndex].foundMatch = true
+                        self.mainCard?.foundMatch = true
                     }
                     changeVisible()
+                    score+=10
+                }
+                else{
+                    score-=1
                 }
             }
         }
